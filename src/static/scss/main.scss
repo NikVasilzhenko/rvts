@@ -1,0 +1,25 @@
+.team{
+  padding: 103px 0 114px;
+  background: url(../img/pic/team-bg-min.jpg) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.contacts{
+  padding-top: 140px;
+  text-align: center;
+  &__wrap{margin-bottom: 55px;}
+  &__item{
+    font-size: 22px;
+    line-height: 25px;
+    margin-bottom: 1.137em;
+    a{
+      color: #000;
+      text-decoration: none;
+      &:hover{color: #2434C8;}
+    }
+    address{font-style: normal;}
+  }
+}
+.map{
+  height: 764px;
+}

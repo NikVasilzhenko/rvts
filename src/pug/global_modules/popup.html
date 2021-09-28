@@ -1,0 +1,26 @@
+<div class="popup js-popup" id="js-popup">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main">
+    <button class="btn popup__close js-close-popup" title="Закрыть окно">
+      <img src="img/svg/close.svg" alt="">
+    </button>
+    <h2 class="popup__title js-popup-title">Связаться с нами</h2>
+    <form action="php/mail.php" class="popup__form js-form-val">
+      <input hidden type="text" name="title" class="js-hide-input">
+      <input class="input" type="text" name="name" placeholder="Имя">
+      <input class="input js-val" type="tel" name="tel" placeholder="Телефон">
+      <button class="btn btn--primery popup__btn" type="submit">Отправить заявку</button>
+      <sub class="popup__sub">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности</sub>
+    </form>
+  </div>
+</div>
+<div class="popup js-popup" id="js-confirm">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main">
+    <button class="btn popup__close js-close-popup" title="Закрыть окно">
+      <img src="img/svg/close.svg" alt="">
+    </button>
+    <h2 class="popup__title">Ваша заявка принята</h2>
+    <p class="popup__txt">В ближайшее время с вами свяжется менеджер для уточнения деталей</p>
+  </div>
+</div>
