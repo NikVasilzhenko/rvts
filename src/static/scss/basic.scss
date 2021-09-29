@@ -23,6 +23,10 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
+  &.no-scroll{
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 /*clearfix*/
@@ -45,10 +49,63 @@ body{
 .btn{
   @include btn-reset;
   &--primery{
-    
+    padding: 14px 25px;
+    background-color: #004A89;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    &:hover{background-color: #001E89;}
   }
   &--secondary{
-    
+    padding: 14px 38px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    &:hover{
+      background-color: #fff;
+      color: #000;
+    }
+    @media only screen and (max-width : 767px){
+      span{display: none;}
+    }
+  }
+  &--secondary-blue{
+    padding: 14px 38px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    border: 1px solid #004A89;
+    border-radius: 5px;
+    min-width: 224px;
+    &:hover{
+      border-color: #004A89;
+      background-color: #001E89;
+      color: #fff;
+    }
+  }
+  &--secondary-dark{
+    padding: 14px 32px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+  }
+  &--revers{
+    padding: 16px 22px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+    color: #0B0B0B;
+    &:hover{
+      background-color: #001E89;
+      color: #fff;
+    }
   }
 }
 /*layout*/
@@ -66,12 +123,19 @@ body{
 .main{flex-grow: 1;}
 .sec{
   padding: 150px 0;
+  @media only screen and (max-width : 767px){
+    padding: 80px 0;
+  }
 }
 .sec-title{
   margin-bottom: 30px;
   text-align: center;
   font-size: 36px;
   font-weight: 400;
+  @media only screen and (max-width : 767px){
+    font-size: 25px;
+    line-height: 30px;
+  }
 }
 .sec-txt{
   margin: 0 auto;
@@ -79,6 +143,10 @@ body{
   font-size: 20px;
   line-height: 1.6;
   p:not(:last-child){margin-bottom: 1.7em;}
+  @media only screen and (max-width : 767px){
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 .container{
@@ -86,6 +154,12 @@ body{
   margin: 0 auto;
   padding: 0 50px;
   max-width: 1270px;
+  @media only screen and (max-width : 991px){
+    padding: 0 32px;
+  }
+  @media only screen and (max-width : 767px){
+    padding: 0 20px;
+  }
 }
 
 /*typographyc*/
@@ -149,4 +223,6 @@ img{
   }
   &:focus:required:valid{color: #000;}
   &:required:valid{color: #000;}
+  &:focus{border-color: #000;}
+  &:not(:placeholder-shown){border-color: #000;}
 }

@@ -1,5 +1,6 @@
 $(document).ready(function(){
   
+  
   //scroll
   $('.js-scroll').click(function(e){
     e.preventDefault();
@@ -12,9 +13,11 @@ $(document).ready(function(){
   
   //order btn
   $('.js-order-btn').on('click', function(){
+    console.log('111');
     $('#js-popup .js-popup-title').text('Отправить заявку');
     $('#js-popup .js-hide-input').val('Заявка');
     $('#js-popup').fadeIn(250);
+    $('body').addClass('no-scroll');
   });
   
   //callback btn
@@ -22,11 +25,13 @@ $(document).ready(function(){
     $('#js-popup .js-popup-title').text('Связаться с нами');
     $('#js-popup .js-hide-input').val('Связаться с нами');
     $('#js-popup').fadeIn(250);
+    $('body').addClass('no-scroll');
   });
   
   //close popup
   $('.js-close-popup').on('click', function(){
     $('.js-popup').fadeOut(250);
+    $('body').removeClass('no-scroll');
   });
   
   //submit
@@ -67,7 +72,7 @@ $(document).ready(function(){
   
   //fix header
   $(window).on('scroll', function(){
-    if( $(window).scrollTop() >  $('#js-hero').innerHeight()){
+    if( $(window).scrollTop() >  ($('#js-hero').innerHeight() - 50)){
       $('#js-header-fix').addClass('fix');
     } else{
       $('#js-header-fix').removeClass('fix');
@@ -77,5 +82,11 @@ $(document).ready(function(){
   //show all menu
   $('#js-short-menu').on('click', function(){
     $('#js-header-fix').toggleClass('open');
+  });
+  
+  //close popup
+  $('.js-mob-menu').on('click', function(){
+    $('#js-mob-menu').toggleClass('show');
+    $('body').toggleClass('no-scroll');
   });
 });

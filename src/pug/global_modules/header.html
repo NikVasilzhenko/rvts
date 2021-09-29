@@ -5,10 +5,15 @@
       <div class="header__bar">
         <button class="btn btn--secondary header-btn js-callback-btn">Связаться с нами</button>
         <div class="header__contacts">
-          <a href="mailto:info@rvts.ru">info@rvts.ru</a>
-          <a href="tel:+74958990490">+7 (495) 899-04-90</a>
+          <div><a href="mailto:info@rvts.ru">info@rvts.ru</a></div>
+          <div><a href="tel:+74958990490">+7 (495) 899-04-90</a></div>
         </div>
       </div>
+      <button class="btn burger header-burger js-mob-menu" title="Развернуть Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
     <nav class="nav nav--header">
       <ul>
@@ -23,32 +28,53 @@
     </nav>
   </div>
 </header>
+
 <header class="header-fix" id="js-header-fix">
   <div class="container">
     <div class="header-fix__wrap">
       <div class="header-fix-logo">
         <img src="img/svg/logo-revers.svg" alt="Лготип НПК РВТС">
       </div>
-      <div class="header-fix-menu">
-        <nav class="header-fix-nav">
-          <ul>
-            <li><a class="js-scroll hide" href="#about">О нас</a></li>
-            <li><a class="js-scroll" href="#technologies">Технологии</a></li>
-            <li><a class="js-scroll" href="#decisions">Решения</a></li>
-            <li><a class="js-scroll" href="#advantages">Преимущества</a></li>
-            <li><a class="js-scroll" href="#openings">Вакансии</a></li>
-            <li><a class="js-scroll hide" href="#team">Наша команда</a></li>
-            <li><a class="js-scroll" href="#contacts">Контакты</a></li>
-          </ul>
-        </nav>
-        <button class="btn burger" id="js-short-menu" title="Развернуть Меню">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+      <nav class="nav">
+        <ul>
+          <li class="hide"><a class="js-scroll" href="#about">О нас</a></li>
+          <li><a class="js-scroll" href="#technologies">Технологии</a></li>
+          <li><a class="js-scroll" href="#decisions">Решения</a></li>
+          <li><a class="js-scroll" href="#advantages">Преимущества</a></li>
+          <li><a class="js-scroll" href="#openings">Вакансии</a></li>
+          <li class="hide"><a class="js-scroll" href="#team">Наша команда</a></li>
+          <li><a class="js-scroll" href="#contacts">Контакты</a></li>
+        </ul>
+      </nav> 
+      <button class="btn burger" id="js-short-menu" title="Развернуть Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <a href="tel:+74958990490" class="header-fix-tel">+7 (495) 899-04-90</a>
+      <button class="btn burger header-burger js-mob-menu" title="Развернуть Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
 </header>
+
+<nav class="mob-menu" id="js-mob-menu">
+  <button class="btn mob-menu__close js-mob-menu" title="Закрыть меню">
+    <img src="img/svg/close.svg" alt="">
+  </button>
+  <ul>
+    <ul>
+      <li><a class="js-scroll js-mob-menu" href="#about">О нас</a></li>
+      <li><a class="js-scroll js-mob-menu" href="#technologies">Технологии</a></li>
+      <li><a class="js-scroll js-mob-menu" href="#decisions">Решения</a></li>
+      <li><a class="js-scroll js-mob-menu" href="#advantages">Преимущества</a></li>
+      <li><a class="js-scroll js-mob-menu" href="#openings">Вакансии</a></li>
+      <li><a class="js-scroll js-mob-menu" href="#team">Наша команда</a></li>
+      <li><a class="js-scroll js-mob-menu" href="#contacts">Контакты</a></li>
+    </ul>
+  </ul>
+</nav>
 
