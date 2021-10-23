@@ -13,7 +13,6 @@ $(document).ready(function(){
   
   //order btn
   $('.js-order-btn').on('click', function(){
-    console.log('111');
     $('#js-popup .js-popup-title').text('Отправить заявку');
     $('#js-popup .js-hide-input').val('Заявка');
     $('#js-popup').fadeIn(250);
@@ -35,11 +34,17 @@ $(document).ready(function(){
   });
   
   //submit
+  let valid = false;
+  $(".js-tel").mask("+7 (999) 999-99-99", {
+    placeholder: "+7 (___) ___-__-__" ,
+    completed : function(){
+      valid = true;
+    }
+  });
   $('.js-form-val').on('submit', function(e){
     e.preventDefault();
     let form = $(this),
-        fields = $(form).find('.js-val'),            
-        valid = true;
+        fields = $(form).find('.js-val');
     
     $.each($(fields), function(){
       if (!$.trim($(this).val())){
@@ -88,5 +93,13 @@ $(document).ready(function(){
   $('.js-mob-menu').on('click', function(){
     $('#js-mob-menu').toggleClass('show');
     $('body').toggleClass('no-scroll');
+  });
+  
+  //js-show-more
+  $('.js-show-more').on('click', function(){
+    $('.decisions__hide.hided').eq(0).slideDown(250).removeClass('hided');
+    if($('.decisions__hide.hided').length === 0){
+      $(this).remove();
+    }
   });
 });

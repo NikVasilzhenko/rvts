@@ -23,10 +23,12 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
-  &.no-scroll{
-    height: 100%;
-    overflow: hidden;
-  }
+  @media only screen and (max-width : 1024px){
+    &.no-scroll{
+      height: 100%;
+      overflow: hidden;
+    }
+  }  
 }
 
 /*clearfix*/
@@ -55,6 +57,9 @@ body{
     font-size: 18px;
     line-height: 21px;
     color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
     &:hover{background-color: #001E89;}
   }
   &--secondary{
@@ -81,7 +86,7 @@ body{
     border-radius: 5px;
     min-width: 224px;
     &:hover{
-      border-color: #004A89;
+      border-color: #001E89;
       background-color: #001E89;
       color: #fff;
     }
@@ -93,6 +98,11 @@ body{
     color: #000;
     border: 1px solid #000;
     border-radius: 5px;
+    &:hover{
+      border-color: #001E89;
+      background-color: #001E89;
+      color: #fff;
+    }
   }
   &--revers{
     padding: 16px 22px;
